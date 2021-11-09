@@ -5,9 +5,9 @@ import java.util.HashSet;
 
 public class MyArray {
     public int RemoveDuplicates(int[] nums) {
-        int arrayLength = nums.length;
+
         int freePosition = 1;
-        for (int i = 1; i < arrayLength; i++) {
+        for (int i = 1; i < nums.length; i++) {
             if (nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -27,16 +27,16 @@ public class MyArray {
         return profit;
     }
 
-    public int[] RotateArray(int[] nums, int k) {
-        int[] rotatedArray = new int[nums.length];
-        for (int i = 0; i <= k; i++) {
-            rotatedArray[i] = nums[nums.length - i - 1];
-            System.out.println(nums[nums.length - k]);
+    public void RotateArray(int[] nums, int k) {
+        int[] rotatedArray = {nums.length};
+        for (int i = 0; i < nums.length; i++) {
+            if (i + k -1 == nums.length){
+                rotatedArray[i + k - 1] = nums[i];
+            }else{
+                rotatedArray[i + k - 1] = nums[i];
+            }
         }
-        for (int i = 0; i < nums.length - k; i++) {
-            rotatedArray[i + k] = nums[i];
-        }
-        return rotatedArray;
+        nums = rotatedArray;
     }
 
     public boolean ContainsDuplicate(int[] nums) {

@@ -1,5 +1,7 @@
 import array.MyArray;
 
+import java.util.Arrays;
+
 public class main {
     public static void main(String[] args) {
         MyArray array = new MyArray();
@@ -9,11 +11,11 @@ public class main {
         int[] prices = {1,2,3,4,5};
         System.out.println(array.MaxProfit(prices));
 
+
         int[] nums2 = {1,2,3,4,5};
-        nums2 = array.RotateArray(nums2, 3);
-        for (int i = 0; i < nums2.length; i++) {
-            System.out.print(nums2[i] + " ");
-        }
+        array.RotateArray(nums2, 3);
+        System.out.println(Arrays.toString(nums2));
+
         System.out.println();
         int[] nums3 = {1,2,3,4,5};
         System.out.println(array.ContainsDuplicate(nums3));
