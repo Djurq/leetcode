@@ -68,6 +68,28 @@ public class MyArray {
     }
 
     public int[] intersect(int[] nums1, int[] nums2) {
-        return nums1;
+        List<Integer> intersects = new ArrayList<>();
+        int i = 0;
+        int j = 0;
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+
+        while (i < nums1.length && j < nums2.length) {
+                if (nums1[i] == nums2[j]){
+                    intersects.add(nums1[i]);
+                    i++;
+                    j++;
+                }else if(nums1[i] < nums2[j]){
+                    i++;
+                }else{
+                    j++;
+                }
+        }
+
+        int[] intersect = new int[intersects.size()];
+        for (int k = 0; k < intersects.size(); k++) {
+            intersect[k] = intersects.get(k);
+        }
+        return intersect;
     }
 }

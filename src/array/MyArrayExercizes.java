@@ -58,11 +58,11 @@ public class MyArrayExercizes {
     }
 
     public static void Intersect(){
-        System.out.println("Single Number");
+        System.out.println("Intersect");
         System.out.println();
         MyArray array = new MyArray();
-        int[] nums = {4,9,5};
-        int[] nums2 = {9,4,9,8,4};
+        int[] nums = {1,2,2,1};
+        int[] nums2 = {2,2};
         System.out.println(Arrays.toString(nums) + " ");
         System.out.print(Arrays.toString(nums2));
         System.out.println();
