@@ -1,8 +1,6 @@
 package array;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class MyArray {
 
@@ -36,7 +34,7 @@ public class MyArray {
         int[] rotatedArray = Arrays.copyOf(nums, nums.length);
         k = k % nums.length;
         for (int i = 0; i < nums.length; i++) {
-            if (i + k -1 >= nums.length -1) {
+            if (i + k - 1 >= nums.length - 1) {
                 nums[(i + k) - nums.length] = rotatedArray[i];
             } else {
                 nums[i + k] = rotatedArray[i];
@@ -70,7 +68,6 @@ public class MyArray {
     }
 
     public int[] intersect(int[] nums1, int[] nums2) {
-        int[] intersection = new int[2];
-        return intersection;
+        return nums1;
     }
 }
